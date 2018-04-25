@@ -10,4 +10,8 @@ class Patient
     self.appointments << appointment
     appointment.patient = self
   end
+
+  def doctors
+    self.appointments.collect {|appointment| appointment.doctor}
+  end
 end
